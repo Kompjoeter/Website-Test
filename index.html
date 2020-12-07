@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <script src="blog-control.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script  type="text/babel" src="Project.js"></script>
+    <script  type="text/babel" src="Portfolio.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(
+            <>
+            <Portfolio />
+            </>,
+            document.querySelector('.portfolio-container'));
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1 class="header-title-primary">Title-Primary</h1>
+            <h2 class="header-title-secondary">Title-Secondary</h2>
+        </div>
+    </header>
+
+    <div class="site-content">
+
+    <div class="section" id="portfolio">
+
+        <div class="portfolio-container"></div>
+
+    </div>
+
+    <div class="section" id="blog">
+
+        <div class="blogpost">
+            <h2 class="blogpost-title" id="title"></h2>
+            <h3 class="blogpost-date" id="date"></h3>
+            <br>
+            <div class="blogpost-description" id="description"></div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+    
+</body>
+</html>
