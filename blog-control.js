@@ -1,31 +1,54 @@
 var postAmount;
 var postActive = 0;
 var postsSource = "https://raw.githubusercontent.com/RanDByyp/Github-Hosted-Blog/master/posts.json"
-var latestPostFirst = false;
+var latestPostFirst = true;
 
 window.addEventListener('load', (event) => 
 {
-    blogPostToggle();
+    fetchJson();
 });
 
-function blogPostToggle()
+//NEW
+
+function fetchJson()
 {
-    console.log('fetching data');
     fetch(postsSource)
     .then(response => response.json())
-    .then(json => JsonApplyData(json[postActive],false)
-    );
+    .then(json => prepJson(json));
 }
 
-function JsonApplyData(post, applyTxt)
-{
-    let title = document.getElementById('title');
-    let date = document.getElementById('date');
-    let description = document.getElementById('description');
+//NEWEND
 
-    title.innerText = post.title;
-    date.innerText = post.date;
-    description.innerText = post.description;
+function prepJson(jsonFile)
+{
+
+    for(let i = jsonFile.length - 1; i > jsonFile.length -4; i--)
+    {
+        if (i >= 0)
+        {
+            let postCounter = i-1 - (jsonFile.length - 4);
+            blogPostToggle(false,jsonFile[i],postCounter);
+        }
+    }
+}
+
+function blogPostToggle(applyTxt,post,postCounter)
+{
+    JsonApplyData(post,applyTxt,postCounter)
+}
+
+function JsonApplyData(post, applyTxt,postCounter)
+{
+    blogpost = document.getElementById('post0'+postCounter);
+
+    let title = blogpost.getElementsByClassName('blogpost-title');
+    let date = blogpost.getElementsByClassName('blogpost-date');
+    let description = blogpost.getElementsByClassName('blogpost-description');
+
+    title[0].innerText = post.title;
+    date[0].innerText = post.date;
+    description[0].innerText = post.description;
+
     if (applyTxt)
     {
         JsonApplyTxt(post.file);  

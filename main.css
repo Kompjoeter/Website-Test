@@ -98,6 +98,14 @@ header
     height: 20px;
 }
 
+.blogpost
+{
+    grid-column: span 12;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px black solid;
+}
+
 
 @media only screen and (min-width: 768px) {
     .Project
