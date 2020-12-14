@@ -12,19 +12,27 @@ function applyBlog(jsonFile)
     applyTxt = true;
     postAmount = jsonFile.length;
 
-    if (latestPostFirst && !overridePostActive)
+    if (!sessionStorage.getItem('keyPostActive'))
     {
-        postActive = postAmount -1;
+        if (latestPostFirst)
+        {
+            postActive = postAmount -1;
+        }
+        else
+        {
+            postActive = 0;
+        }
     }
     else
     {
-        postActive = 0;
+        postActive = sessionStorage.getItem('keyPostActive');
+        sessionStorage.setItem('keyOverridePostActive', false);
     }
 
     initializeMenu(jsonFile);
     initializeNav(jsonFile);
     JsonApplyData(blogpost[0],jsonFile[postActive]);
-    overridePostActive = false;
+
 }
 
 function initializeMenu(json)
