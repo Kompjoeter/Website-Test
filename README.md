@@ -1,2 +1,4 @@
 # Website-Test
-Deploying for testing purposes
+Version control and
+Deploying for testing purposes 
+Production code, it's dirty but it works. Needs refactoring

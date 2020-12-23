@@ -5,56 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    
-    <script src="blog-control.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="blog-control-summary.js"></script>
+    <script src="blog-utility.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script  type="text/babel" src="Project.js"></script>
-    <script  type="text/babel" src="Portfolio.js"></script>
+    <script  type="text/babel" src="components/Project.js"></script>
+    <script  type="text/babel" src="components/Portfolio.js"></script>
     <script type="text/babel">
         ReactDOM.render(
-            <>
+        <>
             <Portfolio />
-            </>,
-            document.querySelector('.portfolio-container'));
+        </>,
+        document.querySelector('.portfolio-container'));
     </script>
 </head>
 <body>
-
-    <header>
-        <div class="header-content">
-            <h1 class="header-title-primary">Title-Primary</h1>
-            <h2 class="header-title-secondary">Title-Secondary</h2>
-        </div>
-    </header>
-
+    
     <div class="site-content">
 
-    <div class="section" id="portfolio">
+        <div class="section" id="section-about">
+            <h2 class="section-title">About</h2>
+            <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur, quis voluptatum harum nulla fuga sapiente minima quos atque repellat nemo voluptate iste saepe accusantium! Numquam consequuntur dolorum earum architecto cumque praesentium amet, magni similique autem nihil consequatur sit iusto nobis tempore pariatur. 
+                <br><br>
+                Facilis nam ipsam quas et rem quisquam necessitatibus. Nesciunt necessitatibus aliquid cum dignissimos assumenda nostrum minima, in ipsum laudantium tempore aperiam accusantium repellat quos quae voluptate facilis iusto qui nihil dolore distinctio quam officiis consectetur odit eum? </p>
+        </div>
 
-        <div class="portfolio-container"></div>
+        <div class="section-divider"></div>
 
-    </div>
+        <div class="section" id="section-portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur, quis voluptatum harum nulla fuga sapiente minima quos atque repellat nemo voluptate iste saepe accusantium! Numquam consequuntur dolorum earum architecto cumque praesentium amet, magni similique autem nihil consequatur sit iusto nobis tempore pariatur. 
+                <br><br>
+                Facilis nam ipsam quas et rem quisquam necessitatibus. Nesciunt necessitatibus aliquid cum dignissimos assumenda nostrum minima, in ipsum laudantium tempore aperiam accusantium repellat quos quae voluptate facilis iusto qui nihil dolore distinctio quam officiis consectetur odit eum? </p>
+            <div class="portfolio-container"></div>
+        </div>
 
-    <div class="section" id="blog">
+        <div class="section-divider"></div>
 
-        <div class="blogpost">
-            <h2 class="blogpost-title" id="title"></h2>
-            <h3 class="blogpost-date" id="date"></h3>
-            <br>
-            <div class="blogpost-description" id="description"></div>
+        <div class="section" id="section-blog">
+            <h2 class="section-title">Blog</h2>
+            <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur, quis voluptatum harum nulla fuga sapiente minima quos atque repellat nemo voluptate iste saepe accusantium! Numquam consequuntur dolorum earum architecto cumque praesentium amet, magni similique autem nihil consequatur sit iusto nobis tempore pariatur. 
+            </p>
+
+            <div class="blogpost" id="post00">
+                <h2 class="blogpost-title"></h2>
+                <h3 class="blogpost-date"></h3>
+                <br>
+                <div class="blogpost-description"></div>
+                <button>Read more...</button>
+            </div>
+    
+            <div class="blogpost" id="post01">
+                <h2 class="blogpost-title"></h2>
+                <h3 class="blogpost-date"></h3>
+                <br>
+                <div class="blogpost-description"></div>
+                <button>Read more...</button>
+            </div>
+    
+            <div class="blogpost" id="post02">
+                <h2 class="blogpost-title"></h2>
+                <h3 class="blogpost-date"></h3>
+                <br>
+                <div class="blogpost-description"></div>
+                <button>Read more...</button>
+            </div>
 
         </div>
 
+        <footer>
+            <div class="socials-container">
+                <a href="mailto:johangerben@gmail.com"><img src="assets/mailLogo.svg"></a>
+                <a href="https://github.com/RanDByyp"><img src="assets/gitHubLogo.png"></a>
+                <a href="https://twitter.com/RandbYyp"><img src="assets/twitterLogo.svg"></a>
+            </div>
+        </footer>
+
     </div>
 
-
-
-
-
-
-  </div>
-    
 </body>
 </html>
