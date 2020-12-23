@@ -1,0 +1,161 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a, button
+{
+    outline: none;
+}
+
+header
+{
+    height: 80px;
+    background-color: #484848;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25);
+}
+
+.site-content
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column: 1/13;
+    gap: 1em;
+}
+
+.blogpost-container
+{
+    grid-column: 1/13;
+
+    min-height: 1000px;
+    padding: 1em;
+
+    overflow-y: auto;    
+    overflow-x: hidden;
+
+    border-bottom: 1px #484848 solid;
+}
+
+.blogpost-date
+{
+    margin-bottom: 1em;
+}
+
+#text
+{
+    grid-column: 1/13;
+    margin-top: 2em;
+    color: #484848;
+    font-size: .9em;
+    list-style-position: inside;
+}
+
+#text a
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #e37676;
+}
+
+#text pre
+{
+    overflow-x: auto;
+}
+
+/*--Blog Nav--*/
+.blog-nav-container
+{
+    grid-column: 1/13;
+    height: 100%;
+}
+
+.blog-nav-content h2
+{
+    
+    margin: .5em .5em 0em .5em;
+    font-size: 1.5em;
+}
+
+.blog-nav-content
+{
+    height: 100%;
+    border-top: 1px #484848 solid;
+}
+
+#blog-nav-options
+{
+    padding: 1em 1em 1em 0em;
+}
+
+#blog-nav-options button
+{
+    width: 100%;
+    text-align: left;
+    padding-left: 1em;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+}
+
+#blog-nav-options button:hover
+{
+    color: #e37676;
+}
+
+/** First Prev Next Last **/
+
+.button-post-select
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+}
+
+.button-post-select:hover
+{
+    color: #e37676;
+}
+
+.blogpost-prev-next-select
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1/13;
+    margin: 1em;
+}
+
+/** Footer **/
+
+footer
+{
+    display: flex;
+    grid-column: 1/13;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 1em;
+
+    border-top: 1px #484848 solid;
+}
+
+footer img
+{
+    width: 50px;
+}

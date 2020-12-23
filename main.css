@@ -2,62 +2,81 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: 0;
 }
 
 body
 {
-    background-color: #484848;
-    color: lightgray;
-}
-
-header
-{
-    position: relative;
-    height: 100vh;
-
-    border-bottom: 1px lightgray solid;
-}
-
-.header-content
-{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-    width: 100%;
-    text-align: center;
-
-    font-size: 1em;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .site-content
 {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12,1fr);
 }
+
+/** **/
 
 .section
 {
+    display: grid;
     grid-column: 2/12;
+    grid-template-columns: repeat(12,1fr);
+    margin: 2em 0em 2em 0em;
 }
 
-/*Portfolio*/
+.section-title, .section-text
+{
+    grid-column: 1/13;
+}
+
+.section-title
+{
+    margin: 0em 0em .5em 0em;
+}
+
+/** Portfolio **/
+
+.portfolio-container
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column: 1/13;
+}
 
 .portfolio-content
 {
     display: grid;
     grid-template-columns: repeat(12,1fr);
+    grid-column: 1/13;
 }
+
+.portfolio-menu
+{
+    display: flex;
+    grid-column: 1/13;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 1em 0em .5em 0em;
+}
+
+.portfolio-menu button
+{
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+/** Project **/
 
 .Project
 {
     display: none;
+    grid-column: 1/13;
     position: relative;
     grid-column: span 12;
-    margin: 1em 0em 1em 0em;
+    margin: 1em 0em 0em 0em;
 }
 
 .Project.active
@@ -67,7 +86,7 @@ header
 
 .project-title
 {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .project-card
@@ -83,12 +102,12 @@ header
     color: #222222;
 }
 
-.project-image img
+.project-image
 {
     width: 100%;
 }
 
-.Project button
+.project-button
 {
     position: absolute;
     bottom: 5%;
@@ -98,18 +117,34 @@ header
     height: 20px;
 }
 
+/** Blog **/
 
-@media only screen and (min-width: 768px) {
-    .Project
-    {
-        grid-column: span 4;
-        margin: 1em;
-    }
-  }
+.blogpost
+{
+    grid-column: 1/13;
+    margin: 1em 0em 1em 0em;
+    padding: 1em;
+    border: 1px lightgray solid;
+}
 
-  @media only screen and (min-width: 1024px) {
-    .section
-    {
-        grid-column: 3/11;
-    }
-  }
+.blogpost button
+{
+    margin-top: 1em;
+}
+
+/** Footer **/
+
+footer
+{
+    display: flex;
+    grid-column: 1/13;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 1em;
+}
+
+footer img
+{
+    width: 50px;
+}
