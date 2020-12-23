@@ -28,14 +28,15 @@ header
 {
     display: grid;
     grid-template-columns: repeat(12,1fr);
+}
+
+.blog-part
+{
     grid-column: 1/13;
-    gap: 1em;
 }
 
 .blogpost-container
 {
-    grid-column: 1/13;
-
     min-height: 1000px;
     padding: 1em;
 
@@ -52,7 +53,6 @@ header
 
 #text
 {
-    grid-column: 1/13;
     margin-top: 2em;
     color: #484848;
     font-size: .9em;
@@ -74,7 +74,6 @@ header
 /*--Blog Nav--*/
 .blog-nav-container
 {
-    grid-column: 1/13;
     height: 100%;
 }
 
@@ -88,7 +87,7 @@ header
 .blog-nav-content
 {
     height: 100%;
-    border-top: 1px #484848 solid;
+
 }
 
 #blog-nav-options
@@ -137,7 +136,6 @@ header
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    grid-column: 1/13;
     margin: 1em;
 }
 
@@ -145,17 +143,105 @@ header
 
 footer
 {
+    display: grid;
+    grid-column: 1/13;
+    grid-template-columns: repeat(12,1fr);
+    padding: 1em 0em 1em 0em;
+    border-top: 1px #484848 solid;
+}
+
+.socials-container
+{
     display: flex;
     grid-column: 1/13;
     flex-direction: row;
     justify-content: space-evenly;
-
-    padding: 1em;
-
-    border-top: 1px #484848 solid;
 }
 
 footer img
 {
     width: 50px;
+}
+
+
+@media only screen and (min-width: 768px) 
+{
+    .blog-part
+    {
+        grid-column: 2/12;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) 
+{
+    .blogpost-container
+    {
+        grid-column: 2/10;
+        grid-row: 1;
+    }
+
+    .blog-nav-container
+    {
+        grid-column: 10/13;
+        grid-row: 1;
+    }
+
+    .blogpost-prev-next-select
+    {
+        grid-column: 2/10;
+    }   
+
+    .socials-container
+    {
+        grid-column: 2/12;
+        justify-content: start;
+    }
+
+    .socials-container img
+    {
+        margin-right: 1em;
+    }
+
+
+}
+
+@media only screen and (min-width: 1440px) 
+{
+    .blogpost-container
+    {
+        grid-column: 3/10;
+        grid-row: 1;
+    }
+
+    .blog-nav-container
+    {
+        grid-column: 10/11;
+        grid-row: 1;
+        font-size: 1.1em;
+    }
+
+    .blogpost-prev-next-select
+    {
+        grid-column: 3/10;
+    }   
+
+    .socials-container
+    {
+        grid-column: 3/11;
+        justify-content: start;
+    }
+}
+
+@media only screen and (min-width: 2560px) 
+{
+    #text
+    {
+       font-size: 1.5em;
+    }
+
+    .blog-nav
+    {
+        font-size: 1.5em;
+    }
 }
