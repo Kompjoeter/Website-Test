@@ -37,6 +37,7 @@ class Portfolio extends React.Component
         {
             overlayEnabled: false
         });
+        document.body.style.overflowY = 'auto';
     }
 
 
